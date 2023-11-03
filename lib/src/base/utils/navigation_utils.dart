@@ -10,14 +10,14 @@ import 'package:sada_app/src/ui/auth/register/register_screen.dart';
 import 'package:sada_app/src/ui/auth/select-role/select_role.dart';
 import 'package:sada_app/src/ui/auth/splash-screen/splash_screen.dart';
 import 'package:sada_app/src/ui/bottom_tabbar/bottom_tabbar.dart';
-import 'package:sada_app/src/ui/comment_section/comment_section.dart';
-import 'package:sada_app/src/ui/record_audio/publish_article.dart';
-import 'package:sada_app/src/ui/record_audio/select_recording.dart';
+// import 'package:sada_app/src/ui/comment_section/comment_section.dart';
+// import 'package:sada_app/src/ui/record_audio/publish_article.dart';
+// import 'package:sada_app/src/ui/record_audio/select_recording.dart';
 import 'package:sada_app/src/ui/home/display_playlist_screen.dart';
 import 'package:sada_app/src/ui/home/search_bar.dart';
-import 'package:sada_app/src/ui/player-screen/player_screen.dart';
+// import 'package:sada_app/src/ui/player-screen/player_screen.dart';
 import 'package:sada_app/src/ui/profile/profile_edit_screen.dart';
-import 'package:sada_app/src/ui/record_audio/update_written_article.dart';
+// import 'package:sada_app/src/ui/record_audio/update_written_article.dart';
 import 'package:sada_app/src/ui/settings/language_change_screen.dart';
 import 'package:sada_app/src/ui/settings/settings_screen.dart';
 import 'package:sada_app/src/ui/profile/artist_profile_screen.dart';
@@ -81,12 +81,12 @@ class NavigationUtils {
           builder: (_) =>
               const ForgotPassword(), // To pass args use as const ForgotPassword(id: args?["id"])
         );
-      case routeAudioPlayer:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) =>
-              const PlayerScreen(), // To pass args use as const ForgotPassword(id: args?["id"])
-        );
+      // case routeAudioPlayer:
+      //   return MaterialPageRoute(
+      //     settings: settings,
+      //     builder: (_) =>
+      //         const Container(), // To pass args use as const ForgotPassword(id: args?["id"])
+      //   );
       case routeConfirmPassword:
         return MaterialPageRoute(
           settings: settings,
@@ -120,14 +120,14 @@ class NavigationUtils {
             fromTerms: args?[paramFromTerms],
           ), // To pass args use as const SettingsScreen(id: args?["id"])
         );
-      case routeUpdateArticle:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) => UpdateWrittenArticleScreen(
-              articleData: args?[paramArticleData],
-              isWritten: args?[
-                  paramIsWrittenArticle]), // To pass args use as const SettingsScreen(id: args?["id"])
-        );
+      // case routeUpdateArticle:
+      //   return MaterialPageRoute(
+      //     settings: settings,
+      //     builder: (_) => UpdateWrittenArticleScreen(
+      //         articleData: args?[paramArticleData],
+      //         isWritten: args?[
+      //             paramIsWrittenArticle]), // To pass args use as const SettingsScreen(id: args?["id"])
+      //   );
       case routeDisplayPlaylist:
         return MaterialPageRoute(
           settings: settings,
@@ -144,37 +144,37 @@ class NavigationUtils {
               imageUrl: args?[
                   paramImageUrl]), // To pass args use as const EditProfileScreen(id: args?["id"])
         );
-      case routePublishArticle:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) => PublishArticleScreen(
-              isArticleRecorded: args?[paramArticleRecorded],
-              articleData: args?[paramArticleData],
-              articleId: args?[paramArticleId],
-              writtenArticle: args?[paramWrittenArticle],
-              fromProfile: args?[paramFromProfile],
-              recordedFile: args?[
-                  paramRecordedFile]), // To pass args use as const PublishArticleScreen(id: args?["id"])
-        );
-      case routeComments:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) => CommentScreen(
-            articleId: args?[paramArticleId],
-          ), // To pass args use as const CommentScreen(id: args?["id"])
-        );
+      // case routePublishArticle:
+      //   return MaterialPageRoute(
+      //     settings: settings,
+      //     builder: (_) => PublishArticleScreen(
+      //         isArticleRecorded: args?[paramArticleRecorded],
+      //         articleData: args?[paramArticleData],
+      //         articleId: args?[paramArticleId],
+      //         writtenArticle: args?[paramWrittenArticle],
+      //         fromProfile: args?[paramFromProfile],
+      //         recordedFile: args?[
+      //             paramRecordedFile]), // To pass args use as const PublishArticleScreen(id: args?["id"])
+      //   );
+      // case routeComments:
+      //   return MaterialPageRoute(
+      //     settings: settings,
+      //     builder: (_) => CommentScreen(
+      //       articleId: args?[paramArticleId],
+      //     ), // To pass args use as const CommentScreen(id: args?["id"])
+      //   );
       case routeLanguageScreen:
         return MaterialPageRoute(
           settings: settings,
           builder: (_) =>
               const LanguageChangeScreen(), // To pass args use as const LanguageChangeScreen(id: args?["id"])
         );
-      case routeAudioRecorder:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) =>
-              const SelectRecordingScreen(), // To pass args use as const AudioRecorderScreen(id: args?["id"])
-        );
+      // case routeAudioRecorder:
+      //   return MaterialPageRoute(
+      //     settings: settings,
+      //     builder: (_) =>
+      //         const SelectRecordingScreen(), // To pass args use as const AudioRecorderScreen(id: args?["id"])
+      //   );
       case routeSearch:
         return MaterialPageRoute(
           settings: settings,
