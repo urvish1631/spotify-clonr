@@ -1,0 +1,23 @@
+// Auth Screen Routes
+const String routeLogin = "routeLogin";
+const String routeRegister = "routeRegister";
+const String routeForgotPassword = "routeForgotPassword";
+const String routeConfirmPassword = "routeConfirmPassword";
+const String routeOtp = "routeOtp";
+const String routeHome = "routeHome";
+const String routeTabBar = "routeTabBar";
+const String routeSplash = "routeSplash";
+const String routeGetStarted = "routeGetStarted";
+const String routeChooseRole = "routeChooseRole";
+const String routeAudioPlayer = "routeAudioPlayer";
+const String routeTermsAndCondition = "routeTermsAndCondition";
+const String routeSettings = "routeSettings";
+const String routeArtistProfile = "routeArtistProfile";
+const String routeDisplayPlaylist = "routeDisplayPlaylist";
+const String routeLanguageScreen = "routeLanguageScreen";
+const String routeAudioRecorder = "routeAudioRecorder";
+const String routeEditProfile = "routeEditProfile";
+const String routePublishArticle = "routePublishArticle";
+const String routeSearch = "routeSearch";
+const String routeComments = "routeComments";
+const String routeUpdateArticle = "routeUpdateArticle";
