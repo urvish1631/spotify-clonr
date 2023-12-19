@@ -43,6 +43,9 @@ version
 # Flutter/Dart/Pub related
 **/doc/api/
 .dart_tool/
+.env.prod
+.env.stage
+.env.dev
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages

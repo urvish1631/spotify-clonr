@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/extensions/string_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
-import 'package:sada_app/src/controllers/auth/auth_controller.dart';
-import 'package:sada_app/src/models/auth/reset_password/req_reset_password_model.dart';
-import 'package:sada_app/src/models/auth/update_password/req_update_password_model.dart';
-import 'package:sada_app/src/widgets/primary_button.dart';
-import 'package:sada_app/src/widgets/primary_text_field.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/extensions/string_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/controllers/auth/auth_controller.dart';
+import 'package:spotify_clone/src/models/auth/reset_password/req_reset_password_model.dart';
+import 'package:spotify_clone/src/models/auth/update_password/req_update_password_model.dart';
+import 'package:spotify_clone/src/widgets/primary_button.dart';
+import 'package:spotify_clone/src/widgets/primary_text_field.dart';
 
 class ConfirmPassword extends StatefulWidget {
   const ConfirmPassword({Key? key}) : super(key: key);

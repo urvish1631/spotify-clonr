@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/apis/apimanagers/home_api_manager.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/app_constant.dart';
-import 'package:sada_app/src/main.dart';
-import 'package:sada_app/src/models/articles/req_recommendation_model.dart';
-import 'package:sada_app/src/models/auth/language/req_language_model.dart';
-import 'package:sada_app/src/models/category/res_category_model.dart';
-import 'package:sada_app/src/providers/article_provider.dart';
-import 'package:sada_app/src/providers/language_provider.dart';
-import 'package:sada_app/src/providers/playlist_provider.dart';
-import 'package:sada_app/src/widgets/toast_widget.dart';
+import 'package:spotify_clone/src/apis/apimanagers/home_api_manager.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/app_constant.dart';
+import 'package:spotify_clone/src/main.dart';
+import 'package:spotify_clone/src/models/articles/req_recommendation_model.dart';
+import 'package:spotify_clone/src/models/auth/language/req_language_model.dart';
+import 'package:spotify_clone/src/models/category/res_category_model.dart';
+import 'package:spotify_clone/src/providers/article_provider.dart';
+import 'package:spotify_clone/src/providers/language_provider.dart';
+import 'package:spotify_clone/src/providers/playlist_provider.dart';
+import 'package:spotify_clone/src/widgets/toast_widget.dart';
 
 class HomeController {
   Future<void> getRecommendationsApi(

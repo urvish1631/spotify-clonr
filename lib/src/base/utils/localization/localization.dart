@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/app_constant.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/app_constant.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
 import 'package:intl/intl.dart';
 
 import 'localization_ar.dart';

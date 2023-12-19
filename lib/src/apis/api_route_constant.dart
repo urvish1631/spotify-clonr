@@ -1,6 +1,6 @@
 // Auth Api Endpoints
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
 
 const String apiLogin = "/user/signin";
 const String apiSignUp = "/user/signup";
@@ -11,8 +11,8 @@ const String apiResetPassword = "/user/reset-password";
 
 //Profile Screen API Endpoints
 const String apiUpdatePassword = '/profile/user/password-update';
-const String apiUpdateProfile = '/profile/user/profile-update'; 
-const String apiDeleteProfile = '/profile/delete-account'; 
+const String apiUpdateProfile = '/profile/user/profile-update';
+const String apiDeleteProfile = '/profile/delete-account';
 const String apiUserProfile = '/profile/user';
 String apiCreatorProfile(int id) {
   if (id == getInt(prefkeyId)) {

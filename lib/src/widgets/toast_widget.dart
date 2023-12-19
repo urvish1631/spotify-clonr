@@ -1,6 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
 
 class ToastUtils {
   static void showSuccess({required String message, int duration = 3}) {
@@ -23,7 +23,7 @@ class ToastUtils {
                 children: [
                   const Icon(
                     Icons.check,
-                    color: whiteColor,
+                    color: blackColor,
                     size: 30,
                   ),
                   const SizedBox(
@@ -36,7 +36,7 @@ class ToastUtils {
                         message,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 5,
-                        style: const TextStyle(color: whiteColor),
+                        style: const TextStyle(color: blackColor),
                       ),
                     ),
                   ),

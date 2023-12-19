@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/extensions/context_extension.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/providers/theme_provier.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/providers/theme_provier.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 

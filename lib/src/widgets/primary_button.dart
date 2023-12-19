@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/extensions/context_extension.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String buttonText;

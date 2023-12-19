@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 // Theme Color
-const Color primaryColor = Color(0xff42c83c);
+const Color splashColor = Color(0xff1f2a54);
+const Color primaryColor = Color(0xff42C83C);
 const Color secondaryColor = Color(0xff333333);
 const Color iconColor = Color(0xffadadad);
 const Color ternartColor = Color(0xff999999);

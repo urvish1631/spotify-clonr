@@ -7,7 +7,7 @@ import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:intl_phone_field/phone_number.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/providers/language_provider.dart';
+import 'package:spotify_clone/src/providers/language_provider.dart';
 
 import '../base/utils/constants/color_constant.dart';
 import '../base/utils/constants/fontsize_constant.dart';

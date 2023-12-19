@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class TermsConditionScreen extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
 
 class ThemeProvider extends ChangeNotifier {
   bool _isDarkMode = false;

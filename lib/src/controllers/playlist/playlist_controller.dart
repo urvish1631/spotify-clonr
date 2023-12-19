@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/apis/apimanagers/playlist_api_manager.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/models/playlist/req_playlist_model.dart';
-import 'package:sada_app/src/models/playlist/res_playlist_model.dart';
-import 'package:sada_app/src/providers/playlist_provider.dart';
-import 'package:sada_app/src/widgets/toast_widget.dart';
+import 'package:spotify_clone/src/apis/apimanagers/playlist_api_manager.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/models/playlist/req_playlist_model.dart';
+import 'package:spotify_clone/src/models/playlist/res_playlist_model.dart';
+import 'package:spotify_clone/src/providers/playlist_provider.dart';
+import 'package:spotify_clone/src/widgets/toast_widget.dart';
 
 class PlaylistController {
   Future<void> createPlaylistApi(

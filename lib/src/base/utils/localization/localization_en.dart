@@ -166,7 +166,7 @@ class LocalizationEN implements Localization {
 
   @override
   String get msgPasswordError =>
-      "Password should be atleast 8 characters long and have atleast one uppercase, one special character and one number.";
+      "Password should be atleast 8 characters long and have atleast one uppercase, one lowercase and one number.";
 
   @override
   String get login => "Login";

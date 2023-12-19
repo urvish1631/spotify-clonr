@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/widgets/transform_widget.dart';
 
 extension ScaffoldExtension on Widget {
   Scaffold normalScaffold({
@@ -56,7 +57,8 @@ extension ScaffoldExtension on Widget {
                   border:
                       Border.all(width: 1, color: whiteColor.withOpacity(0.5)),
                 ),
-                child: const Icon(Icons.arrow_back_ios_new_rounded),
+                child: const TransformWidget(
+                    child: Icon(Icons.arrow_back_ios_new_rounded)),
               ),
             ),
           ),
@@ -119,7 +121,8 @@ extension ScaffoldExtension on Widget {
                       color: blackColor.withOpacity(0.6),
                       borderRadius: BorderRadius.circular(50.0),
                     ),
-                    child: const Icon(Icons.arrow_back_ios_new_rounded),
+                    child: const TransformWidget(
+                        child: Icon(Icons.arrow_back_ios_new_rounded)),
                   ),
                 ),
               )

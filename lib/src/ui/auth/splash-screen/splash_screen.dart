@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -25,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     _timer = Timer.periodic(const Duration(seconds: 2), (timer) {
       if (timer.tick == 1) {
         setState(() {
-          dimension = 260;
+          dimension = 800;
         });
       } else {
         _timer!.cancel();
@@ -54,14 +56,18 @@ class _SplashScreenState extends State<SplashScreen> {
   //Build Method
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: AnimatedContainer(
-        height: dimension,
-        width: dimension,
-        curve: Curves.linearToEaseOut,
-        duration: const Duration(seconds: 1),
-        child: Image.asset(
-          appLogo,
+    return Container(
+      height: context.getHeight(),
+      color: splashColor,
+      child: Center(
+        child: AnimatedContainer(
+          height: dimension,
+          width: dimension,
+          curve: Curves.linearToEaseOut,
+          duration: const Duration(seconds: 2),
+          child: Image.asset(
+            appLogo,
+          ),
         ),
       ),
     );

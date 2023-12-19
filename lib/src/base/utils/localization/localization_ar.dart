@@ -166,8 +166,7 @@ class LocalizationAR implements Localization {
 
   @override
   String get msgPasswordError =>
-      "يجب أن تكون كلمة المرور على الأقل 8 أحرف وتحتوي على حرف كبير واحد وحرف رقمي واحد على الأقل.";
-
+      "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل وأن تحتوي على حرف كبير واحد وحرف صغير واحد ورقم واحد على الأقل.";
   @override
   String get login => "تسجيل الدخول";
 

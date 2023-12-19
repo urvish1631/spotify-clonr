@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/dic_params.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/dialog_utils.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/auth/auth_controller.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/dic_params.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/dialog_utils.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/auth/auth_controller.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);

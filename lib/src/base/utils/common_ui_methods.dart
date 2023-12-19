@@ -3,20 +3,20 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
-import 'package:sada_app/src/providers/player_provider.dart';
-import 'package:sada_app/src/widgets/customdialogs/cupertino_error_dialog.dart';
-import 'package:sada_app/src/widgets/customdialogs/material_error_dialog.dart';
-import 'package:sada_app/src/models/playlist/req_playlist_model.dart';
-import 'package:sada_app/src/widgets/add_playlist_widget.dart';
-import 'package:sada_app/src/widgets/bottom_modal_widget.dart';
-import 'package:sada_app/src/widgets/media_picker_widget.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/providers/player_provider.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/cupertino_error_dialog.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/material_error_dialog.dart';
+import 'package:spotify_clone/src/models/playlist/req_playlist_model.dart';
+import 'package:spotify_clone/src/widgets/add_playlist_widget.dart';
+import 'package:spotify_clone/src/widgets/bottom_modal_widget.dart';
+import 'package:spotify_clone/src/widgets/media_picker_widget.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
 import 'constants/fontsize_constant.dart';
 
 // Text Style

@@ -2,25 +2,26 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/context_extension.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/auth/auth_controller.dart';
-import 'package:sada_app/src/controllers/home/home_controller.dart';
-import 'package:sada_app/src/providers/player_provider.dart';
-import 'package:sada_app/src/providers/profile_data.provider.dart';
-import 'package:sada_app/src/widgets/popmenu_widget.dart';
-import 'package:sada_app/src/widgets/primary_list_tile_widget.dart';
-import 'package:sada_app/src/widgets/profile_skeleton_view.dart';
-import 'package:sada_app/src/widgets/shimmer_widget.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/auth/auth_controller.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/providers/player_provider.dart';
+import 'package:spotify_clone/src/providers/profile_data.provider.dart';
+import 'package:spotify_clone/src/widgets/popmenu_widget.dart';
+import 'package:spotify_clone/src/widgets/primary_list_tile_widget.dart';
+import 'package:spotify_clone/src/widgets/profile_skeleton_view.dart';
+import 'package:spotify_clone/src/widgets/shimmer_widget.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/widgets/transform_widget.dart';
 
 class ArtistProfileScreen extends StatefulWidget {
   final int? artistId;
@@ -148,7 +149,8 @@ class _ArtistProfileScreenState extends State<ArtistProfileScreen> {
                 color: Colors.black.withOpacity(0.6),
                 borderRadius: BorderRadius.circular(50.0),
               ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded),
+              child: const TransformWidget(
+                  child: Icon(Icons.arrow_back_ios_new_rounded)),
             ),
           ),
         ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/ui/home_tabbar/artist_list.dart';
-import 'package:sada_app/src/ui/home_tabbar/category_list.dart';
-import 'package:sada_app/src/ui/home_tabbar/article_list.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/ui/home_tabbar/artist_list.dart';
+import 'package:spotify_clone/src/ui/home_tabbar/category_list.dart';
+import 'package:spotify_clone/src/ui/home_tabbar/article_list.dart';
 
 class HomeTabBar extends StatefulWidget {
   final bool fromSearch;

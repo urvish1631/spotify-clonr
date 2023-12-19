@@ -1,12 +1,12 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:sada_app/src/base/utils/dialog_utils.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/progress_dialog_utils.dart';
+import 'package:spotify_clone/src/base/utils/dialog_utils.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/progress_dialog_utils.dart';
 
-Future<void> handleHttpError(DioError e) async {
+Future<void> handleHttpError(DioException e) async {
   switch (e.type) {
-    case DioErrorType.connectionTimeout:
+    case DioExceptionType.connectionTimeout:
       showAlertDialog(
         message: Localization.of().poorInternetConnection,
         isCancelEnable: false,
@@ -15,7 +15,7 @@ Future<void> handleHttpError(DioError e) async {
         },
       );
       break;
-    case DioErrorType.badResponse:
+    case DioExceptionType.badResponse:
       if (e.response?.statusCode == 401) {
         showAlertDialog(
           message: e.response?.data["error"] ?? "",

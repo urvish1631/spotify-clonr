@@ -9,8 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:sada_app/src/widgets/customdialogs/cupertino_error_dialog.dart';
-import 'package:sada_app/src/widgets/customdialogs/material_error_dialog.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/providers/language_provider.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/cupertino_error_dialog.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/material_error_dialog.dart';
 
 import 'common_ui_methods.dart';
 import 'constants/app_constant.dart';
@@ -34,6 +38,15 @@ void openSettings(String message) {
       AppSettings.openAppSettings();
     },
   );
+}
+
+bool isLanguageArabic() {
+  return Provider.of<LanguageProvider>(
+              locator<NavigationUtils>().getCurrentContext,
+              listen: false)
+          .locale
+          .languageCode ==
+      ar;
 }
 
 double valueFromPercentageInRange(

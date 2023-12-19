@@ -1,4 +1,4 @@
-# sada_app
+# spotify_clone
 
 A new Flutter project.
 

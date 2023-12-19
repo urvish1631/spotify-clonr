@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/phone_number.dart';
-import 'package:sada_app/src/base/utils/constants/app_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/widgets/toast_widget.dart';
+import 'package:spotify_clone/src/base/utils/constants/app_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/widgets/toast_widget.dart';
 import '../utils/constants/color_constant.dart';
 
 extension StringExtension on String {
