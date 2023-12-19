@@ -1,17 +1,17 @@
-import 'package:sada_app/src/apis/api_route_constant.dart';
-import 'package:sada_app/src/apis/api_service.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/dic_params.dart';
-import 'package:sada_app/src/models/articles/req_recommendation_model.dart';
-import 'package:sada_app/src/models/articles/res_article_model.dart';
-import 'package:sada_app/src/models/articles/res_recently_played_model.dart';
-import 'package:sada_app/src/models/articles/res_recommendation_model.dart';
-import 'package:sada_app/src/models/auth/language/req_language_model.dart';
-import 'package:sada_app/src/models/auth/language/res_language_model.dart';
-import 'package:sada_app/src/models/category/res_category_model.dart';
-import 'package:sada_app/src/models/category/res_category_wise_model.dart';
-import 'package:sada_app/src/models/playlist/res_playlist_model.dart';
-import 'package:sada_app/src/models/res_base_model.dart';
+import 'package:spotify_clone/src/apis/api_route_constant.dart';
+import 'package:spotify_clone/src/apis/api_service.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/dic_params.dart';
+import 'package:spotify_clone/src/models/articles/req_recommendation_model.dart';
+import 'package:spotify_clone/src/models/articles/res_article_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recently_played_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recommendation_model.dart';
+import 'package:spotify_clone/src/models/auth/language/req_language_model.dart';
+import 'package:spotify_clone/src/models/auth/language/res_language_model.dart';
+import 'package:spotify_clone/src/models/category/res_category_model.dart';
+import 'package:spotify_clone/src/models/category/res_category_wise_model.dart';
+import 'package:spotify_clone/src/models/playlist/res_playlist_model.dart';
+import 'package:spotify_clone/src/models/res_base_model.dart';
 
 class HomeApiManager {
   Future<ResRecommendationModel> getRecommendations(

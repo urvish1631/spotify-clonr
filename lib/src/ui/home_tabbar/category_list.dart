@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/dic_params.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/home/home_controller.dart';
-import 'package:sada_app/src/models/category/res_category_model.dart';
-import 'package:sada_app/src/providers/article_provider.dart';
-import 'package:sada_app/src/providers/search_provider.dart';
-import 'package:sada_app/src/widgets/incrementally_loading_listview.dart';
-import 'package:sada_app/src/widgets/primary_list_tile_widget.dart';
-import 'package:sada_app/src/widgets/vertical_skeleton_view.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/dic_params.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/models/category/res_category_model.dart';
+import 'package:spotify_clone/src/providers/article_provider.dart';
+import 'package:spotify_clone/src/providers/search_provider.dart';
+import 'package:spotify_clone/src/widgets/incrementally_loading_listview.dart';
+import 'package:spotify_clone/src/widgets/primary_list_tile_widget.dart';
+import 'package:spotify_clone/src/widgets/transform_widget.dart';
+import 'package:spotify_clone/src/widgets/vertical_skeleton_view.dart';
 
 class CategoryList extends StatefulWidget {
   final bool fromSearch;
@@ -91,9 +92,11 @@ class _CategoryListState extends State<CategoryList> {
                 isCategory: true,
                 imageUrl:
                     categoryProvider.categoryList?[index].imageURL?.trim(),
-                endIcon: SvgPicture.asset(
-                  icRightArrow,
-                  height: 20,
+                endIcon: TransformWidget(
+                  child: SvgPicture.asset(
+                    icRightArrow,
+                    height: 20,
+                  ),
                 ),
                 title: categoryProvider.categoryList?[index].name,
                 onListTileClick: () => locator<NavigationUtils>().push(
@@ -126,9 +129,11 @@ class _CategoryListState extends State<CategoryList> {
               isArticle: false,
               isCategory: true,
               imageUrl: categoryList?[index].imageURL?.trim(),
-              endIcon: SvgPicture.asset(
-                icRightArrow,
-                height: 20,
+              endIcon: TransformWidget(
+                child: SvgPicture.asset(
+                  icRightArrow,
+                  height: 20,
+                ),
               ),
               title: categoryList?[index].name,
               onListTileClick: () => locator<NavigationUtils>().push(

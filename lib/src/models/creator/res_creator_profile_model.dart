@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:sada_app/src/models/articles/res_recommendation_model.dart';
-import 'package:sada_app/src/models/user/res_user_profile_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recommendation_model.dart';
+import 'package:spotify_clone/src/models/user/res_user_profile_model.dart';
 
 part 'res_creator_profile_model.g.dart';
 

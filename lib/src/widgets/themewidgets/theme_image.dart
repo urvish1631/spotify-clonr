@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/providers/theme_provier.dart';
+import 'package:spotify_clone/src/providers/theme_provier.dart';
 import 'package:provider/provider.dart';
 
 class ThemeImage extends StatelessWidget {

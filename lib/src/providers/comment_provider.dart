@@ -1,11 +1,11 @@
-// import 'package:audio_waveforms/audio_waveforms.dart';
+import 'package:audio_waveforms/audio_waveforms.dart';
 import 'package:flutter/foundation.dart';
-import 'package:sada_app/src/models/comment/res_comment_model.dart';
+import 'package:spotify_clone/src/models/comment/res_comment_model.dart';
 
 class CommentProvider with ChangeNotifier {
   ResCommentSectionModel? _articleComments;
-  // List<PlayerController> _listOfControllers = [];
-  // List<PlayerController> get listController => _listOfControllers;
+  List<PlayerController> _listOfControllers = [];
+  List<PlayerController> get listController => _listOfControllers;
   List<CommentModel>? get articleComments => _articleComments?.data;
   bool _isApiCalled = false;
 
@@ -48,10 +48,10 @@ class CommentProvider with ChangeNotifier {
   }
 
   createListOfController() {
-    // _listOfControllers = [];
-    // for (var i = 0; i < (_articleComments?.data ?? []).length; i++) {
-    //   _listOfControllers.add(PlayerController());
-    // }
+    _listOfControllers = [];
+    for (var i = 0; i < (_articleComments?.data ?? []).length; i++) {
+      _listOfControllers.add(PlayerController());
+    }
   }
 
   clearComment() {

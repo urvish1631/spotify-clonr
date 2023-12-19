@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
-// import 'package:just_audio/just_audio.dart';
-// import 'package:just_audio_background/just_audio_background.dart';
-import 'package:sada_app/src/models/articles/res_get_article_model.dart';
-import 'package:sada_app/src/models/articles/res_recently_played_model.dart';
-import 'package:sada_app/src/models/articles/res_recommendation_model.dart';
-import 'package:sada_app/src/models/category/res_category_model.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:spotify_clone/src/models/articles/res_get_article_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recently_played_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recommendation_model.dart';
+import 'package:spotify_clone/src/models/category/res_category_model.dart';
 
 class ArticlesProvider extends ChangeNotifier {
   List<Article> _listRecommendedArticles = [];
@@ -28,8 +28,8 @@ class ArticlesProvider extends ChangeNotifier {
   List<CategoryModel> _listOfArtists = [];
   List<CategoryModel> get artistList => _listOfArtists;
 
-  // List<AudioSource>? _createPlaylist;
-  // List<AudioSource>? get getCreatedPlaylist => _createPlaylist;
+  List<AudioSource>? _createPlaylist;
+  List<AudioSource>? get getCreatedPlaylist => _createPlaylist;
 
   Article? _singleArticle;
   Article? get singleArticle => _singleArticle;
@@ -214,23 +214,23 @@ class ArticlesProvider extends ChangeNotifier {
   }
 
   createPlaylist(List<Article>? getArticles) {
-    // List<AudioSource>? createPlaylist = [];
-    // for (var element in getArticles ?? []) {
-    //   Article data = element;
-    //   if ((data.writtenText ?? '').isEmpty) {
-    //     AudioSource source = AudioSource.uri(
-    //       Uri.parse(data.recordedFile ?? ''),
-    //       tag: MediaItem(
-    //         id: '${data.id}',
-    //         title: data.title ?? '',
-    //         artist: data.user?.name ?? '',
-    //         artUri: Uri.parse(data.imageURL?.trim() ?? ''),
-    //       ),
-    //     );
-    //     createPlaylist.add(source);
-    //   }
-    // }
-    // _createPlaylist = createPlaylist;
+    List<AudioSource>? createPlaylist = [];
+    for (var element in getArticles ?? []) {
+      Article data = element;
+      if ((data.writtenText ?? '').isEmpty) {
+        AudioSource source = AudioSource.uri(
+          Uri.parse(data.recordedFile ?? ''),
+          tag: MediaItem(
+            id: '${data.id}',
+            title: data.title ?? '',
+            artist: data.user?.name ?? '',
+            artUri: Uri.parse(data.imageURL?.trim() ?? ''),
+          ),
+        );
+        createPlaylist.add(source);
+      }
+    }
+    _createPlaylist = createPlaylist;
   }
 
   getListOfArticleIds(List<Article> articles) {

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/home/home_controller.dart';
-import 'package:sada_app/src/providers/article_provider.dart';
-import 'package:sada_app/src/providers/player_provider.dart';
-import 'package:sada_app/src/widgets/primary_list_tile_widget.dart';
-import 'package:sada_app/src/widgets/vertical_skeleton_view.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/providers/article_provider.dart';
+import 'package:spotify_clone/src/providers/player_provider.dart';
+import 'package:spotify_clone/src/widgets/primary_list_tile_widget.dart';
+import 'package:spotify_clone/src/widgets/vertical_skeleton_view.dart';
 
 class RecentlyPlayedScreen extends StatefulWidget {
   const RecentlyPlayedScreen({Key? key}) : super(key: key);

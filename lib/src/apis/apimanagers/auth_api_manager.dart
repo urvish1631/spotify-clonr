@@ -1,22 +1,22 @@
 import 'package:dio/dio.dart';
-import 'package:sada_app/src/apis/api_route_constant.dart';
-import 'package:sada_app/src/apis/api_service.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/models/articles/res_image_upload_model.dart';
-import 'package:sada_app/src/models/auth/login/req_login_model.dart';
-import 'package:sada_app/src/models/auth/login/res_login_model.dart';
-import 'package:sada_app/src/models/auth/otp/req_otp_model.dart';
-import 'package:sada_app/src/models/auth/otp/req_resend_otp_model.dart';
-import 'package:sada_app/src/models/auth/otp/res_otp_model.dart';
-import 'package:sada_app/src/models/auth/otp/res_resend_otp_model.dart';
-import 'package:sada_app/src/models/auth/reset_password/req_reset_password_model.dart';
-import 'package:sada_app/src/models/auth/signup/req_signup_model.dart';
-import 'package:sada_app/src/models/auth/update_password/req_update_password_model.dart';
-import 'package:sada_app/src/models/creator/req_profile_update_model.dart';
-import 'package:sada_app/src/models/creator/res_creator_profile_model.dart';
-import 'package:sada_app/src/models/creator/res_profile_update_model.dart';
-import 'package:sada_app/src/models/res_base_model.dart';
-import 'package:sada_app/src/models/user/res_user_profile_model.dart';
+import 'package:spotify_clone/src/apis/api_route_constant.dart';
+import 'package:spotify_clone/src/apis/api_service.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/models/articles/res_image_upload_model.dart';
+import 'package:spotify_clone/src/models/auth/login/req_login_model.dart';
+import 'package:spotify_clone/src/models/auth/login/res_login_model.dart';
+import 'package:spotify_clone/src/models/auth/otp/req_otp_model.dart';
+import 'package:spotify_clone/src/models/auth/otp/req_resend_otp_model.dart';
+import 'package:spotify_clone/src/models/auth/otp/res_otp_model.dart';
+import 'package:spotify_clone/src/models/auth/otp/res_resend_otp_model.dart';
+import 'package:spotify_clone/src/models/auth/reset_password/req_reset_password_model.dart';
+import 'package:spotify_clone/src/models/auth/signup/req_signup_model.dart';
+import 'package:spotify_clone/src/models/auth/update_password/req_update_password_model.dart';
+import 'package:spotify_clone/src/models/creator/req_profile_update_model.dart';
+import 'package:spotify_clone/src/models/creator/res_creator_profile_model.dart';
+import 'package:spotify_clone/src/models/creator/res_profile_update_model.dart';
+import 'package:spotify_clone/src/models/res_base_model.dart';
+import 'package:spotify_clone/src/models/user/res_user_profile_model.dart';
 
 class AuthApiManager {
   Future<ResLoginModel> login(ReqLoginModel request) async {

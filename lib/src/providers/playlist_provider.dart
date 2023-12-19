@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:sada_app/src/models/articles/res_recommendation_model.dart';
-import 'package:sada_app/src/models/playlist/res_playlist_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recommendation_model.dart';
+import 'package:spotify_clone/src/models/playlist/res_playlist_model.dart';
 
 class PlaylistProvider extends ChangeNotifier {
   List<PlaylistModel>? _playlist;

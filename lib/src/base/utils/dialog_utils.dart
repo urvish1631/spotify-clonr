@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/widgets/customdialogs/cupertino_error_dialog.dart';
-import 'package:sada_app/src/widgets/customdialogs/material_error_dialog.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/cupertino_error_dialog.dart';
+import 'package:spotify_clone/src/widgets/customdialogs/material_error_dialog.dart';
 
 void showAlertDialog({
   required String message,

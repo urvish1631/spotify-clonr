@@ -1,6 +1,6 @@
 {
-    "name": "sada_app",
-    "short_name": "sada_app",
+    "name": "spotify_clone",
+    "short_name": "spotify_clone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

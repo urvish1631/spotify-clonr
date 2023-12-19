@@ -1,9 +1,9 @@
-name: sada_app
+name: spotify_clone
 description: A new Flutter project.
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.5+1
 
 environment:
   sdk: ">=2.16.0 <3.0.0"
@@ -18,7 +18,7 @@ dependencies:
   shared_preferences: ^2.0.18 # To Stored Data in Local Storage
   connectivity_plus: ^2.0.2 # To Check Network Connectivity
   get_it: ^7.2.0 # For Accessing Service Objects
-  shimmer: ^2.0.0 # For Skeleton View
+  shimmer: ^3.0.0 # For Skeleton View
   image_picker: ^0.8.7 # To Pick Image From Camera and Gallery
   app_settings: ^4.2.0 # To Open App Settings
   device_info_plus: ^8.1.0 # To Get Device Info
@@ -32,11 +32,14 @@ dependencies:
   pin_input_text_field: ^4.5.0
   permission_handler: ^10.3.0
   lottie: ^2.3.2
-  bot_toast: ^4.1.3
+  audio_waveforms: ^1.0.4
+  just_audio: ^0.9.34
+  just_audio_background: ^0.0.1-beta.10
+  bot_toast: ^4.0.4
   multi_select_flutter: ^4.1.3
   intl_phone_field: ^3.2.0
-  webview_flutter: ^4.4.1
-
+  flutter_widget_from_html_core: ^0.10.3
+  webview_flutter: ^4.2.2
 
 dev_dependencies:
   flutter_test:
@@ -48,8 +51,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    # - assets/images/
-    # - assets/icons/
+    - assets/images/
+    - assets/icons/
+    - assets/json/
     - .env.dev
     - .env.stage
     - .env.prod

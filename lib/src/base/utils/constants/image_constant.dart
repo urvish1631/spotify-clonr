@@ -1,7 +1,8 @@
 // Common Images
-const String appLogo = 'assets/images/logo.png';
+const String appLogo = 'assets/images/logo_1.png';
 const String backgroundImage = 'assets/images/background_image.png';
-const String headerLogo = 'assets/images/header_logo.png';
+const String headerLogo = 'assets/images/header_logo_2.png';
+const String iconLogo = 'assets/images/small_logo.png';
 const String dummyImage =
     'https://voice-articles.s3.me-south-1.amazonaws.com/voice-user-images/bd657779-5681-43c6-bce9-a066200f3338.png';
 const String dummyArticleImage =
@@ -17,6 +18,7 @@ const String recordAnimation = 'assets/json/recording.json';
 
 // Icons
 const String icLogo = 'assets/images/logo.png';
+const String icMic = 'assets/icons/microphone.png';
 const String icCancel = 'assets/icons/close.png';
 const String icPassword = 'assets/icons/password_icon.svg';
 const String icLeftArrow = 'assets/icons/left_arrow.svg';

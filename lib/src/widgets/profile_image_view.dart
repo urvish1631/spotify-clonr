@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/widgets/shimmer_widget.dart';
+import 'package:spotify_clone/src/widgets/shimmer_widget.dart';
 
 class ProfileImageView extends StatelessWidget {
   final String imageUrl;

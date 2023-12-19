@@ -1,21 +1,21 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/extensions/string_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/app_constant.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
-import 'package:sada_app/src/controllers/auth/auth_controller.dart';
-import 'package:sada_app/src/models/auth/signup/req_signup_model.dart';
-import 'package:sada_app/src/widgets/mobile_text_field.dart';
-import 'package:sada_app/src/widgets/primary_button.dart';
-import 'package:sada_app/src/widgets/primary_text_field.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/extensions/string_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/app_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/controllers/auth/auth_controller.dart';
+import 'package:spotify_clone/src/models/auth/signup/req_signup_model.dart';
+import 'package:spotify_clone/src/widgets/mobile_text_field.dart';
+import 'package:spotify_clone/src/widgets/primary_button.dart';
+import 'package:spotify_clone/src/widgets/primary_text_field.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);

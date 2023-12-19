@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/models/auth/login/res_login_model.dart';
-import 'package:sada_app/src/models/creator/res_creator_profile_model.dart';
-import 'package:sada_app/src/models/user/res_user_profile_model.dart';
+import 'package:spotify_clone/src/models/auth/login/res_login_model.dart';
+import 'package:spotify_clone/src/models/creator/res_creator_profile_model.dart';
+import 'package:spotify_clone/src/models/user/res_user_profile_model.dart';
 
 class ProfileDataProvider extends ChangeNotifier {
   ResCreatorProfileModel? _creatorData;

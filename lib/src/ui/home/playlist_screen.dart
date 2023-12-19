@@ -1,22 +1,22 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/context_extension.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/dic_params.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/playlist/playlist_controller.dart';
-import 'package:sada_app/src/providers/playlist_provider.dart';
-import 'package:sada_app/src/widgets/grid_skeleton_view.dart';
-import 'package:sada_app/src/widgets/shimmer_widget.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/dic_params.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/playlist/playlist_controller.dart';
+import 'package:spotify_clone/src/providers/playlist_provider.dart';
+import 'package:spotify_clone/src/widgets/grid_skeleton_view.dart';
+import 'package:spotify_clone/src/widgets/shimmer_widget.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
 
 class PlayListScreen extends StatefulWidget {
   const PlayListScreen({Key? key}) : super(key: key);

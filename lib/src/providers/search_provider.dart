@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/models/articles/res_recommendation_model.dart';
-import 'package:sada_app/src/models/category/res_category_model.dart';
-import 'package:sada_app/src/models/search/res_search_model.dart';
+import 'package:spotify_clone/src/models/articles/res_recommendation_model.dart';
+import 'package:spotify_clone/src/models/category/res_category_model.dart';
+import 'package:spotify_clone/src/models/search/res_search_model.dart';
 
 class SearchProvider extends ChangeNotifier {
   List<CategoryModel>? _categoryList;

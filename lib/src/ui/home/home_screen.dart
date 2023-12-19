@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/home/home_controller.dart';
-import 'package:sada_app/src/models/articles/req_recommendation_model.dart';
-import 'package:sada_app/src/providers/article_provider.dart';
-import 'package:sada_app/src/providers/player_provider.dart';
-import 'package:sada_app/src/widgets/horizontal_skeleton_view.dart';
-import 'package:sada_app/src/widgets/incrementally_loading_listview.dart';
-import 'package:sada_app/src/widgets/primary_podcast_widget.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/models/articles/req_recommendation_model.dart';
+import 'package:spotify_clone/src/providers/article_provider.dart';
+import 'package:spotify_clone/src/providers/player_provider.dart';
+import 'package:spotify_clone/src/widgets/horizontal_skeleton_view.dart';
+import 'package:spotify_clone/src/widgets/incrementally_loading_listview.dart';
+import 'package:spotify_clone/src/widgets/primary_podcast_widget.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
 
 import '../home_tabbar/home_tabbar_widget.dart';
 

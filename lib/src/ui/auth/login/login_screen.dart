@@ -1,21 +1,20 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/extensions/string_extension.dart';
-import 'package:sada_app/src/base/utils/common_ui_methods.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
-import 'package:sada_app/src/controllers/auth/auth_controller.dart';
-import 'package:sada_app/src/models/auth/login/req_login_model.dart';
-import 'package:sada_app/src/widgets/primary_button.dart';
-import 'package:sada_app/src/widgets/primary_text_field.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/extensions/string_extension.dart';
+import 'package:spotify_clone/src/base/utils/common_ui_methods.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/controllers/auth/auth_controller.dart';
+import 'package:spotify_clone/src/models/auth/login/req_login_model.dart';
+import 'package:spotify_clone/src/widgets/primary_button.dart';
+import 'package:spotify_clone/src/widgets/primary_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -45,14 +44,6 @@ class _LoginScreenState extends State<LoginScreen> {
     await setString(prefkeyEmailAddress, numberWithCountryCode);
   }
 
-@override
-  void initState() {
-    if(kDebugMode){
-      _emailController.text = "urvish.sojitra@seaflux.tech";
-      _passwordController.text = "Test1234";
-    }
-    super.initState();
-  }
   //Build method
   @override
   Widget build(BuildContext context) {

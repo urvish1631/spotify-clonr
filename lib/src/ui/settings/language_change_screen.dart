@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/extensions/scaffold_extension.dart';
-import 'package:sada_app/src/base/utils/constants/app_constant.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/fontsize_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/controllers/home/home_controller.dart';
-import 'package:sada_app/src/models/auth/language/req_language_model.dart';
-import 'package:sada_app/src/providers/language_provider.dart';
-import 'package:sada_app/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/scaffold_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/app_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/models/auth/language/req_language_model.dart';
+import 'package:spotify_clone/src/providers/language_provider.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
 
 class LanguageChangeScreen extends StatefulWidget {
   const LanguageChangeScreen({Key? key}) : super(key: key);

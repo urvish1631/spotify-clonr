@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/controllers/article/article_controller.dart';
-import 'package:sada_app/src/providers/search_provider.dart';
-import 'package:sada_app/src/ui/home_tabbar/home_tabbar_widget.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/controllers/article/article_controller.dart';
+import 'package:spotify_clone/src/providers/search_provider.dart';
+import 'package:spotify_clone/src/ui/home_tabbar/home_tabbar_widget.dart';
 
 class SearchBarScreen extends StatefulWidget {
   const SearchBarScreen({Key? key}) : super(key: key);

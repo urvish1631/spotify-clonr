@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
 
 import 'constants/color_constant.dart';
 import 'navigation_utils.dart';

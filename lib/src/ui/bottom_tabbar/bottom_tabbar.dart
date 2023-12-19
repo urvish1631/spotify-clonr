@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-// import 'package:just_audio/just_audio.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
-import 'package:sada_app/src/base/dependencyinjection/locator.dart';
-import 'package:sada_app/src/base/utils/constants/color_constant.dart';
-import 'package:sada_app/src/base/utils/constants/image_constant.dart';
-import 'package:sada_app/src/base/utils/constants/navigation_route_constants.dart';
-import 'package:sada_app/src/base/utils/constants/preference_key_constant.dart';
-import 'package:sada_app/src/base/utils/localization/localization.dart';
-import 'package:sada_app/src/base/utils/navigation_utils.dart';
-import 'package:sada_app/src/base/utils/preference_utils.dart';
-import 'package:sada_app/src/providers/bottom_tabbar.provider.dart';
-import 'package:sada_app/src/providers/player_provider.dart';
-import 'package:sada_app/src/ui/home/playlist_screen.dart';
-import 'package:sada_app/src/ui/home/recent_play.screen.dart';
-import 'package:sada_app/src/ui/home/home_screen.dart';
-import 'package:sada_app/src/ui/profile/profile_screen.dart';
+import 'package:spotify_clone/src/base/dependencyinjection/locator.dart';
+import 'package:spotify_clone/src/base/extensions/context_extension.dart';
+import 'package:spotify_clone/src/base/utils/constants/color_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/fontsize_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/image_constant.dart';
+import 'package:spotify_clone/src/base/utils/constants/navigation_route_constants.dart';
+import 'package:spotify_clone/src/base/utils/constants/preference_key_constant.dart';
+import 'package:spotify_clone/src/base/utils/localization/localization.dart';
+import 'package:spotify_clone/src/base/utils/navigation_utils.dart';
+import 'package:spotify_clone/src/base/utils/preference_utils.dart';
+import 'package:spotify_clone/src/controllers/home/home_controller.dart';
+import 'package:spotify_clone/src/providers/bottom_tabbar_provider.dart';
+import 'package:spotify_clone/src/providers/player_provider.dart';
+import 'package:spotify_clone/src/ui/home/playlist_screen.dart';
+import 'package:spotify_clone/src/ui/home/recent_play.screen.dart';
+import 'package:spotify_clone/src/ui/home/home_screen.dart';
+import 'package:spotify_clone/src/ui/profile/profile_screen.dart';
+import 'package:spotify_clone/src/widgets/profile_image_view.dart';
+import 'package:spotify_clone/src/widgets/themewidgets/theme_text.dart';
+import 'package:spotify_clone/src/widgets/transform_widget.dart';
 
 class BottomTabBar extends StatefulWidget {
   const BottomTabBar({Key? key}) : super(key: key);
@@ -48,14 +54,12 @@ class _BottomTabBarState extends State<BottomTabBar> {
                 onPressed: () {
                   locator<NavigationUtils>().push(routeAudioRecorder);
                 },
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   minRadius: 30.0,
-                  backgroundColor: primaryColor,
-                  child: ClipOval(
-                    child: Icon(
-                      Icons.mic,
-                      color: blackColor,
-                    ),
+                  backgroundColor: blackColor,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(icMic),
                   ),
                 ),
               )
@@ -70,15 +74,15 @@ class _BottomTabBarState extends State<BottomTabBar> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.asset(
-                      icLogo,
+                      iconLogo,
                     ),
                   ),
                 ),
               ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: _children[data.currentIndex],
-        // persistentFooterButtons:
-        //     currentArticle == null ? null : _getMiniPlayer(playerProvider),
+        persistentFooterButtons:
+            currentArticle == null ? null : _getMiniPlayer(playerProvider),
         bottomNavigationBar: BottomNavigationBar(
           mouseCursor: SystemMouseCursors.click,
           selectedItemColor: primaryColor,
@@ -142,143 +146,147 @@ class _BottomTabBarState extends State<BottomTabBar> {
     );
   }
 
-  // Widget getCurrentStatusButton(AudioPlayer audioPlayer) {
-  //   return StreamBuilder<PlayerState>(
-  //       stream: audioPlayer.playerStateStream,
-  //       builder: (context, snapshot) {
-  //         final playerState = snapshot.data;
-  //         final processingState = playerState?.processingState;
-  //         final playing = playerState?.playing;
-  //         return !(playing ?? false) &&
-  //                 (processingState == ProcessingState.loading)
-  //             ? IconButton(
-  //                 onPressed: () => {},
-  //                 color: whiteColor,
-  //                 icon: const Padding(
-  //                   padding: EdgeInsets.all(7.0),
-  //                   child: CircularProgressIndicator(
-  //                     color: whiteColor,
-  //                   ),
-  //                 ),
-  //               )
-  //             : (playing ?? false) &&
-  //                     (processingState != ProcessingState.completed)
-  //                 ? IconButton(
-  //                     onPressed: audioPlayer.pause,
-  //                     color: whiteColor,
-  //                     icon: const Icon(
-  //                       Icons.pause,
-  //                       size: 50,
-  //                     ),
-  //                   )
-  //                 : IconButton(
-  //                     onPressed: audioPlayer.play,
-  //                     color: whiteColor,
-  //                     icon: const Icon(
-  //                       Icons.play_arrow_rounded,
-  //                       size: 50,
-  //                     ),
-  //                   );
-  //       });
-  // }
+  Widget getCurrentStatusButton(AudioPlayer audioPlayer) {
+    return StreamBuilder<PlayerState>(
+        stream: audioPlayer.playerStateStream,
+        builder: (context, snapshot) {
+          final playerState = snapshot.data;
+          final processingState = playerState?.processingState;
+          final playing = playerState?.playing;
+          return !(playing ?? false) &&
+                  (processingState == ProcessingState.loading)
+              ? IconButton(
+                  onPressed: () => {},
+                  color: whiteColor,
+                  icon: const Padding(
+                    padding: EdgeInsets.all(7.0),
+                    child: CircularProgressIndicator(
+                      color: whiteColor,
+                    ),
+                  ),
+                )
+              : (playing ?? false) &&
+                      (processingState != ProcessingState.completed)
+                  ? IconButton(
+                      onPressed: audioPlayer.pause,
+                      color: whiteColor,
+                      icon: const Icon(
+                        Icons.pause,
+                        size: 50,
+                      ),
+                    )
+                  : IconButton(
+                      onPressed: audioPlayer.play,
+                      color: whiteColor,
+                      icon: const Icon(
+                        Icons.play_arrow_rounded,
+                        size: 50,
+                      ),
+                    );
+        });
+  }
 
-  // List<Widget> _getMiniPlayer(PlayerProvider playerProvider) {
-  //   return [
-  //     GestureDetector(
-  //       onTap: () {
-  //         locator<NavigationUtils>().push(routeAudioPlayer);
-  //       },
-  //       child: Column(
-  //         children: [
-  //           StreamBuilder<SequenceState?>(
-  //             stream: playerProvider.audioPlayer.sequenceStateStream,
-  //             builder: (context, sequenceState) {
-  //               final state = sequenceState.data;
-  //               final data = state?.currentSource?.tag;
-  //               return Row(
-  //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //                 children: [
-  //                   data?.artUri?.toString() == null ||
-  //                           (data?.artUri?.toString() ?? '').isEmpty
-  //                       ? const ProfileImageView(
-  //                           imageUrl: dummyArticleImage,
-  //                           size: 50,
-  //                         )
-  //                       : ProfileImageView(
-  //                           imageUrl: data?.artUri?.toString().trim() ?? '',
-  //                           size: 50,
-  //                         ),
-  //                   SizedBox(
-  //                     width: context.getWidth(0.2),
-  //                     child: Column(
-  //                       mainAxisAlignment: MainAxisAlignment.center,
-  //                       crossAxisAlignment: CrossAxisAlignment.start,
-  //                       mainAxisSize: MainAxisSize.min,
-  //                       children: [
-  //                         ThemeText(
-  //                           text: data?.title ?? '',
-  //                           lightTextColor: whiteColor,
-  //                           fontSize: fontSize16,
-  //                           fontWeight: fontWeightBold,
-  //                           overflow: TextOverflow.ellipsis,
-  //                         ),
-  //                         ThemeText(
-  //                           text: data?.artist ?? '',
-  //                           lightTextColor: whiteColor,
-  //                           fontSize: fontSize12,
-  //                           overflow: TextOverflow.ellipsis,
-  //                         ),
-  //                       ],
-  //                     ),
-  //                   ),
-  //                   Row(
-  //                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-  //                     children: [
-  //                       IconButton(
-  //                         onPressed: () async {
-  //                           await playerProvider.audioPlayer.seekToPrevious();
-  //                         },
-  //                         icon: SvgPicture.asset(
-  //                           icPrevious,
-  //                           width: 20,
-  //                         ),
-  //                       ),
-  //                       getCurrentStatusButton(playerProvider.audioPlayer),
-  //                       IconButton(
-  //                         onPressed: () async {
-  //                           if (playerProvider
-  //                                   .audioPlayer.playerState.processingState !=
-  //                               ProcessingState.completed) {
-  //                             await locator<HomeController>().recentPlayedTrack(
-  //                                 context: context, id: int.parse(data?.id));
-  //                           }
-  //                           await playerProvider.audioPlayer.seekToNext();
-  //                         },
-  //                         icon: SvgPicture.asset(
-  //                           icNext,
-  //                           width: 20,
-  //                         ),
-  //                       ),
-  //                       IconButton(
-  //                         onPressed: () async {
-  //                           await playerProvider.audioPlayer.stop();
-  //                           playerProvider.clearArticle();
-  //                         },
-  //                         icon: Image.asset(
-  //                           icCancel,
-  //                           color: Colors.grey,
-  //                           width: 20,
-  //                         ),
-  //                       ),
-  //                     ],
-  //                   ),
-  //                 ],
-  //               );
-  //             },
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   ];
-  // }
+  List<Widget> _getMiniPlayer(PlayerProvider playerProvider) {
+    return [
+      GestureDetector(
+        onTap: () {
+          locator<NavigationUtils>().push(routeAudioPlayer);
+        },
+        child: Column(
+          children: [
+            StreamBuilder<SequenceState?>(
+              stream: playerProvider.audioPlayer.sequenceStateStream,
+              builder: (context, sequenceState) {
+                final state = sequenceState.data;
+                final data = state?.currentSource?.tag;
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    data?.artUri?.toString() == null ||
+                            (data?.artUri?.toString() ?? '').isEmpty
+                        ? const ProfileImageView(
+                            imageUrl: dummyArticleImage,
+                            size: 50,
+                          )
+                        : ProfileImageView(
+                            imageUrl: data?.artUri?.toString().trim() ?? '',
+                            size: 50,
+                          ),
+                    SizedBox(
+                      width: context.getWidth(0.2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ThemeText(
+                            text: data?.title ?? '',
+                            lightTextColor: whiteColor,
+                            fontSize: fontSize16,
+                            fontWeight: fontWeightBold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          ThemeText(
+                            text: data?.artist ?? '',
+                            lightTextColor: whiteColor,
+                            fontSize: fontSize12,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            await playerProvider.audioPlayer.seekToPrevious();
+                          },
+                          icon: TransformWidget(
+                            child: SvgPicture.asset(
+                              icPrevious,
+                              width: 20,
+                            ),
+                          ),
+                        ),
+                        getCurrentStatusButton(playerProvider.audioPlayer),
+                        IconButton(
+                          onPressed: () async {
+                            if (playerProvider
+                                    .audioPlayer.playerState.processingState !=
+                                ProcessingState.completed) {
+                              await locator<HomeController>().recentPlayedTrack(
+                                  context: context, id: int.parse(data?.id));
+                            }
+                            await playerProvider.audioPlayer.seekToNext();
+                          },
+                          icon: TransformWidget(
+                            child: SvgPicture.asset(
+                              icNext,
+                              width: 20,
+                            ),
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            await playerProvider.audioPlayer.stop();
+                            playerProvider.clearArticle();
+                          },
+                          icon: Image.asset(
+                            icCancel,
+                            color: Colors.grey,
+                            width: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    ];
+  }
 }

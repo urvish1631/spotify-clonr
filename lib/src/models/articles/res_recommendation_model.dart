@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:sada_app/src/models/articles/res_get_article_model.dart';
+import 'package:spotify_clone/src/models/articles/res_get_article_model.dart';
 
 part 'res_recommendation_model.g.dart';
 
